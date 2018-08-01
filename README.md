@@ -14,14 +14,16 @@ Summary: Apply Partial Correlation coefficient with Information Theory (PCIT) to
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-pcit-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-pcit-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-pcit-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-pcit-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-pcit-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-pcit-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-pcit-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-pcit-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-pcit-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-pcit-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-pcit-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-pcit-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-pcit/badges/version.svg)](https://anaconda.org/conda-forge/r-pcit)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-pcit/badges/downloads.svg)](https://anaconda.org/conda-forge/r-pcit)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--pcit-green.svg)](https://anaconda.org/conda-forge/r-pcit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-pcit.svg)](https://anaconda.org/conda-forge/r-pcit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-pcit.svg)](https://anaconda.org/conda-forge/r-pcit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-pcit.svg)](https://anaconda.org/conda-forge/r-pcit) |
 
 Installing r-pcit
 =================
