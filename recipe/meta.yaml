@@ -1,5 +1,4 @@
 {% set version = '1.5-3' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: PCIT_{{ version }}.tar.gz
   url:
     - https://cran.r-project.org/src/contrib/PCIT_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/PCIT/PCIT_{{ version }}.tar.gz
@@ -18,8 +16,6 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 1003
-  skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -33,7 +29,6 @@ requirements:
     - {{ compiler('m2w64_c') }}  # [win]
   host:
     - r-base
-
   run:
     - r-base
 
@@ -63,7 +58,3 @@ extra:
     - MathiasHaudgaard
     - FrodePedersen
     - ArneKr
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
