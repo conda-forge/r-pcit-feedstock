@@ -7,20 +7,24 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pcit-feedstoc
 About r-pcit
 ------------
 
-Home: https://cran.r-project.org/web/packages/PCIT/index.html
+Home: https://cran.r-project.org/package=PCIT
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Summary: Apply Partial Correlation coefficient with Information Theory (PCIT) to a correlation matrix. The PCIT algorithm identifies meaningful correlations to define edges in a weighted network. The algorithm can be applied to any correlation-based network including but not limited to gene co-expression networks. To reduce compute time by making use of multiple compute cores, simply run PCIT on a computer with has multiple cores and also has the Rmpi package installed. PCIT will then auto-detect the multicore environment and run in parallel mode without the need to rewrite your scripts. This makes scripts, using PCIT, portable across single core (or no Rmpi package installed) computers which will run in serial mode and multicore (with Rmpi package installed) computers which will run in parallel mode.
+
+Documentation: https://doi.org/10.1093/bioinformatics/btp674
 
 About r-pcit
 ------------
 
-Home: https://cran.r-project.org/web/packages/PCIT/index.html
+Home: https://cran.r-project.org/package=PCIT
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Summary: Apply Partial Correlation coefficient with Information Theory (PCIT) to a correlation matrix. The PCIT algorithm identifies meaningful correlations to define edges in a weighted network. The algorithm can be applied to any correlation-based network including but not limited to gene co-expression networks. To reduce compute time by making use of multiple compute cores, simply run PCIT on a computer with has multiple cores and also has the Rmpi package installed. PCIT will then auto-detect the multicore environment and run in parallel mode without the need to rewrite your scripts. This makes scripts, using PCIT, portable across single core (or no Rmpi package installed) computers which will run in serial mode and multicore (with Rmpi package installed) computers which will run in parallel mode.
+
+Documentation: https://doi.org/10.1093/bioinformatics/btp674
 
 Current build status
 ====================
