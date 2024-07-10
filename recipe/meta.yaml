@@ -1,6 +1,5 @@
 {% set version = '1.5-3' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-pcit
@@ -10,23 +9,27 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/PCIT_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/PCIT/PCIT_{{ version }}.tar.gz
-
   sha256: b2183d6d9ad6159004db272194a695837c7d285bea70a2a49a3781864544223e
 
 build:
-  merge_build_host: True  # [win]
-  number: 1007
+  number: 1008
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
     - {{ compiler('fortran') }}        # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}              # [unix]
+    - {{ stdlib("c") }}                # [unix]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
+    - {{ posix }}filesystem            # [win]
+    - {{ posix }}make
+    - {{ posix }}sed                   # [win]
+    - {{ posix }}coreutils             # [win]
+    - {{ posix }}zip                   # [win]
   host:
     - r-base
   run:
@@ -34,12 +37,13 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('PCIT')"  # [not win]
+    - $R -e "library('PCIT')"           # [not win]
     - "\"%R%\" -e \"library('PCIT')\""  # [win]
 
 about:
-  home: https://cran.r-project.org/web/packages/PCIT/index.html
-  license: GPL-3
+  home: https://cran.r-project.org/package=PCIT
+  doc_url: https://doi.org/10.1093/bioinformatics/btp674
+  license: GPL-3.0-only
   summary: Apply Partial Correlation coefficient with Information Theory (PCIT) to a correlation
     matrix. The PCIT algorithm identifies meaningful correlations to define edges in
     a weighted network. The algorithm can be applied to any correlation-based network
